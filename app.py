@@ -19,4 +19,4 @@ if st.sidebar.button("Start Simulation"):
     for _ in range(loops):
         placeholder.text(game.format_grid(grid))
         grid = game.update_grid(grid)
-        time.sleep(0.2)
+        time.sleep(0.5)
