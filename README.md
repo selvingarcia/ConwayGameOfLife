@@ -12,7 +12,7 @@ That's it! Despite these simple rules, complex and fascinating patterns emerge o
 
 🌐 Try It Online
 Run it now in the cloud (no installation needed):
-https://conway-game-of-life.streamlit.app
+https://conwaygameoflife.streamlit.app/
 Just click the link and start playing! The simulation runs entirely in your browser.
 
 🎯 What You Learn
@@ -25,7 +25,7 @@ Streamlit: Build interactive web apps with pure Python
 
  Installation
 Option 1: Run Online (Easiest!)
-Visit: https://conway-game-of-life.streamlit.app
+Visit: https://conwaygameoflife.streamlit.app/
 No installation required! Everything runs in your browser.
 
 Option 2: Run Locally
