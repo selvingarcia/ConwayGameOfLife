@@ -1,6 +1,22 @@
 import streamlit as st
-from streamlit_ace import st_ace
+import time
+import numpy as np
+import ConwayGameOfLife  # your logic file
 
-code = st_ace(language="python", theme="monokai", key="editor1")
-st.write("You wrote:")
-st.code(code or "")
+game = ConwayGameOfLife.ConwayGameOfLife()
+
+# --- Sidebar input ---
+st.sidebar.title("Conway's Game of Life Settings")
+rows = st.sidebar.number_input("Number of rows:", min_value=5, max_value=50, value=10)
+cols = st.sidebar.number_input("Number of columns:", min_value=5, max_value=50, value=10)
+loops = st.sidebar.number_input("Number of loops:", min_value=1, max_value=200, value=20)
+
+# --- Button to start ---
+if st.sidebar.button("Start Simulation"):
+    grid = game.create_grid(rows, cols)
+
+    placeholder = st.empty()
+    for _ in range(loops):
+        placeholder.text(game.format_grid(grid))
+        grid = game.update_grid(grid)
+        time.sleep(0.2)
